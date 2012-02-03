@@ -1,0 +1,1 @@
+A quick and dirty port of <a href="http://jint.codeplex.com/">Jint</a> to the Windows Phone environment. It involved making changes to antlr, along with lots of internals for it to work in the constrained compact framework.

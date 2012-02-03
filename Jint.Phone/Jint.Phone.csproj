@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9847AF28-8E4C-4337-B89D-A724B528E345}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jint.Phone</RootNamespace>
+    <AssemblyName>Jint.Phone</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="mscorlib.extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Jint\CachedTypeResolver.cs">
+      <Link>CachedTypeResolver.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Debugger\BreakPoint.cs">
+      <Link>Debugger\BreakPoint.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Debugger\DebugInformation.cs">
+      <Link>Debugger\DebugInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Debugger\SourceCodeDescriptor.cs">
+      <Link>Debugger\SourceCodeDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\ExecutionVisitor.cs">
+      <Link>ExecutionVisitor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\ArrayDeclaration.cs">
+      <Link>Expressions\ArrayDeclaration.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\AssignmentExpression.cs">
+      <Link>Expressions\AssignmentExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\BinaryExpression.cs">
+      <Link>Expressions\BinaryExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\BlockStatement.cs">
+      <Link>Expressions\BlockStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\BreakStatement.cs">
+      <Link>Expressions\BreakStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\CaseClause.cs">
+      <Link>Expressions\CaseClause.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\CatchClause.cs">
+      <Link>Expressions\CatchClause.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\ClrIdentifier.cs">
+      <Link>Expressions\ClrIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\CommaOperatorStatement.cs">
+      <Link>Expressions\CommaOperatorStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\ContinueStatement.cs">
+      <Link>Expressions\ContinueStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\DoWhileStatement.cs">
+      <Link>Expressions\DoWhileStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\EmptyStatement.cs">
+      <Link>Expressions\EmptyStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\Expression.cs">
+      <Link>Expressions\Expression.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\ExpressionStatement.cs">
+      <Link>Expressions\ExpressionStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\FinallyClause.cs">
+      <Link>Expressions\FinallyClause.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\ForEachInStatement.cs">
+      <Link>Expressions\ForEachInStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\ForStatement.cs">
+      <Link>Expressions\ForStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\FunctionDeclarationStatement.cs">
+      <Link>Expressions\FunctionDeclarationStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\FunctionExpression.cs">
+      <Link>Expressions\FunctionExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\IAssignable.cs">
+      <Link>Expressions\IAssignable.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\Identifier.cs">
+      <Link>Expressions\Identifier.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\IForStatement.cs">
+      <Link>Expressions\IForStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\IfStatement.cs">
+      <Link>Expressions\IfStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\IFunctionDeclaration.cs">
+      <Link>Expressions\IFunctionDeclaration.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\IGenericExpression.cs">
+      <Link>Expressions\IGenericExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\Indexer.cs">
+      <Link>Expressions\Indexer.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\JsonExpression.cs">
+      <Link>Expressions\JsonExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\MemberExpression.cs">
+      <Link>Expressions\MemberExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\MethodCall.cs">
+      <Link>Expressions\MethodCall.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\NewExpression.cs">
+      <Link>Expressions\NewExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\Program.cs">
+      <Link>Expressions\Program.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\PropertyDeclarationExpression.cs">
+      <Link>Expressions\PropertyDeclarationExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\PropertyExpression.cs">
+      <Link>Expressions\PropertyExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\RegexpExpression.cs">
+      <Link>Expressions\RegexpExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\ReturnStatement.cs">
+      <Link>Expressions\ReturnStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\Statement.cs">
+      <Link>Expressions\Statement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\SwitchStatement.cs">
+      <Link>Expressions\SwitchStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\TernaryExpression.cs">
+      <Link>Expressions\TernaryExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\ThrowStatement.cs">
+      <Link>Expressions\ThrowStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\TryStatement.cs">
+      <Link>Expressions\TryStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\UnaryExpression.cs">
+      <Link>Expressions\UnaryExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\ValueExpression.cs">
+      <Link>Expressions\ValueExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\VariableDeclarationStatement.cs">
+      <Link>Expressions\VariableDeclarationStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\WhileStatement.cs">
+      <Link>Expressions\WhileStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Expressions\WithStatement.cs">
+      <Link>Expressions\WithStatement.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\IConstructorInvoker.cs">
+      <Link>IConstructorInvoker.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\IJintVisitor.cs">
+      <Link>IJintVisitor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\ITypeResolver.cs">
+      <Link>ITypeResolver.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\JintEngine.cs">
+      <Link>JintEngine.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\JintException.cs">
+      <Link>JintException.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Marshal.cs">
+      <Link>Marshal.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Marshal\Delegates.cs">
+      <Link>Marshal\Delegates.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Marshal\JsFunctionDelegate.cs">
+      <Link>Marshal\JsFunctionDelegate.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Marshal\JsPropertyAttribute.cs">
+      <Link>Marshal\JsPropertyAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Marshal\ProxyHelper.cs">
+      <Link>Marshal\ProxyHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Marshal\RawJsMethodAttribute.cs">
+      <Link>Marshal\RawJsMethodAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\ClrFunction.cs">
+      <Link>Native\ClrFunction.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\ClrImplDefinition.cs">
+      <Link>Native\ClrImplDefinition.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\Descriptor.cs">
+      <Link>Native\Descriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\IGlobal.cs">
+      <Link>Native\IGlobal.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\ILiteral.cs">
+      <Link>Native\ILiteral.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\INativeIndexer.cs">
+      <Link>Native\INativeIndexer.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsApplyFunction.cs">
+      <Link>Native\JsApplyFunction.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsArguments.cs">
+      <Link>Native\JsArguments.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsArray.cs">
+      <Link>Native\JsArray.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsArrayConstructor.cs">
+      <Link>Native\JsArrayConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsBoolean.cs">
+      <Link>Native\JsBoolean.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsBooleanConstructor.cs">
+      <Link>Native\JsBooleanConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsCallFunction.cs">
+      <Link>Native\JsCallFunction.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsClrConstructorInfo.cs">
+      <Link>Native\JsClrConstructorInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsClrMethodInfo.cs">
+      <Link>Native\JsClrMethodInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsComparer.cs">
+      <Link>Native\JsComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsConstructor.cs">
+      <Link>Native\JsConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsDate.cs">
+      <Link>Native\JsDate.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsDateConstructor.cs">
+      <Link>Native\JsDateConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsDictionaryObject.cs">
+      <Link>Native\JsDictionaryObject.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsError.cs">
+      <Link>Native\JsError.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsErrorConstructor.cs">
+      <Link>Native\JsErrorConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsException.cs">
+      <Link>Native\JsException.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsFunction.cs">
+      <Link>Native\JsFunction.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsFunctionConstructor.cs">
+      <Link>Native\JsFunctionConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsFunctionWrapper.cs">
+      <Link>Native\JsFunctionWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsGlobal.cs">
+      <Link>Native\JsGlobal.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsInstance.cs">
+      <Link>Native\JsInstance.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsMathConstructor.cs">
+      <Link>Native\JsMathConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsNull.cs">
+      <Link>Native\JsNull.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsNumber.cs">
+      <Link>Native\JsNumber.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsNumberConstructor.cs">
+      <Link>Native\JsNumberConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsObject.cs">
+      <Link>Native\JsObject.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsObjectConstructor.cs">
+      <Link>Native\JsObjectConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsRegExp.cs">
+      <Link>Native\JsRegExp.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsRegExpConstructor.cs">
+      <Link>Native\JsRegExpConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsScope.cs">
+      <Link>Native\JsScope.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsString.cs">
+      <Link>Native\JsString.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsStringConstructor.cs">
+      <Link>Native\JsStringConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\JsUndefined.cs">
+      <Link>Native\JsUndefined.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\LinkedDescriptor.cs">
+      <Link>Native\LinkedDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\NativeArrayIndexer.cs">
+      <Link>Native\NativeArrayIndexer.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\NativeConstructor.cs">
+      <Link>Native\NativeConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\NativeDescriptor.cs">
+      <Link>Native\NativeDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\NativeGenericType.cs">
+      <Link>Native\NativeGenericType.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\NativeIndexer.cs">
+      <Link>Native\NativeIndexer.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\NativeMethod.cs">
+      <Link>Native\NativeMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\NativeMethodOverload.cs">
+      <Link>Native\NativeMethodOverload.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\NativeOverloadImpl.cs">
+      <Link>Native\NativeOverloadImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\NativeTypeConstructor.cs">
+      <Link>Native\NativeTypeConstructor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\PropertyAttributes.cs">
+      <Link>Native\PropertyAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\PropertyDescriptor.cs">
+      <Link>Native\PropertyDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Native\ValueDescriptor.cs">
+      <Link>Native\ValueDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Number.cs">
+      <Link>Number.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Options.cs">
+      <Link>Options.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Parser\ES3Lexer.cs">
+      <Link>Parser\ES3Lexer.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\Parser\ES3Parser.cs">
+      <Link>Parser\ES3Parser.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\PropertyBags\DictionaryPropertyBag.cs">
+      <Link>PropertyBags\DictionaryPropertyBag.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\PropertyBags\DoubleListPropertyBag.cs">
+      <Link>PropertyBags\DoubleListPropertyBag.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\PropertyBags\HashedPropertyBag.cs">
+      <Link>PropertyBags\HashedPropertyBag.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\PropertyBags\IPropertyBag.cs">
+      <Link>PropertyBags\IPropertyBag.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\PropertyBags\MiniCachedPropertyBag.cs">
+      <Link>PropertyBags\MiniCachedPropertyBag.cs</Link>
+    </Compile>
+    <Compile Include="..\Jint\PropertyBags\ScopedPropertyBag.cs">
+      <Link>PropertyBags\ScopedPropertyBag.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WP7Extensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Antlr3.Runtime.Phone\Antlr3.Runtime.Phone.csproj">
+      <Project>{288C3578-E90B-4B49-88C1-9861ACDC0E44}</Project>
+      <Name>Antlr3.Runtime.Phone</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
